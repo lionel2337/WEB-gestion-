@@ -1,0 +1,180 @@
+/* 
+ * Style global de l'application Global Enterprise Corp 
+ */
+:root {
+    --primary: #1e3a5f;
+    --secondary: #2c7be5;
+    --accent: #00d97e;
+    --warning: #f6c343;
+    --danger: #e63757;
+    --bg-color: #f5f7fa;
+    --sidebar-bg: #0b1727;
+    --card-bg: #ffffff;
+    --text-main: #1e2e40;
+    --text-muted: #6b7b8d;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+}
+
+h1, h2, h3, h4, h5, h6, .font-poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Wrapper and Layout */
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+/* Sidebar */
+#sidebar {
+    min-width: 260px;
+    max-width: 260px;
+    background: var(--sidebar-bg);
+    color: #fff;
+    transition: all 0.3s;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar.active {
+    min-width: 70px;
+    max-width: 70px;
+    text-align: center;
+}
+
+#sidebar.active .sidebar-header h3,
+#sidebar.active .logo-text,
+#sidebar.active .user-info h6,
+#sidebar.active .user-info span.badge,
+#sidebar.active ul.components li a span {
+    display: none;
+}
+
+#sidebar.active .user-info img {
+    width: 40px;
+    height: 40px;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: rgba(0,0,0,0.1);
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+}
+
+#sidebar ul li a {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+#sidebar ul li a i {
+    min-width: 30px;
+    font-size: 1.1rem;
+}
+
+#sidebar ul li a:hover,
+#sidebar ul li.active > a {
+    color: #fff;
+    background: var(--primary);
+    border-left: 4px solid var(--secondary);
+}
+
+/* Content Area */
+#content {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s;
+}
+
+.top-navbar {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: 10px 20px;
+}
+
+.search-bar .form-control {
+    background-color: #f1f4f8;
+    border-color: #f1f4f8;
+}
+
+.search-bar .form-control:focus {
+    box-shadow: none;
+    border-color: #f1f4f8;
+    background-color: #e9ecef;
+}
+
+.search-bar .input-group-text {
+    background-color: #f1f4f8;
+    border-color: #f1f4f8;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Buttons */
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+}
+
+.btn-primary:hover {
+    background-color: #2368c7;
+    border-color: #2368c7;
+}
+
+/* Utilities */
+.text-primary { color: var(--primary) !important; }
+.text-secondary { color: var(--secondary) !important; }
+.text-success { color: var(--accent) !important; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -260px;
+        position: fixed;
+        z-index: 999;
+    }
+    #sidebar.active {
+        margin-left: 0;
+        min-width: 260px;
+        max-width: 260px;
+    }
+    #sidebar.active .logo-text,
+    #sidebar.active .user-info h6,
+    #sidebar.active .user-info span.badge,
+    #sidebar.active ul.components li a span {
+        display: inline-block;
+    }
+}

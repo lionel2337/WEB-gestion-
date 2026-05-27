@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="global_enterprise_corp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="metadata">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="export_date" type="xs:string" />
+              <xs:element name="total_records" type="xs:integer" />
+              <xs:element name="generated_by" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="employes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="employe">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="nom" type="xs:string" />
+                    <xs:element name="prenom" type="xs:string" />
+                    <xs:element name="email" type="xs:string" />
+                    <xs:element name="telephone" type="xs:string" />
+                    <xs:element name="sexe" type="xs:string" />
+                    <xs:element name="date_naissance" type="xs:date" />
+                    <xs:element name="date_embauche" type="xs:date" />
+                    <xs:element name="departement" type="xs:string" />
+                    <xs:element name="poste" type="xs:string" />
+                    <xs:element name="succursale" type="xs:string" />
+                    <xs:element name="statut" type="xs:string" />
+                    <xs:element name="type_employe" type="xs:string" />
+                    <xs:element name="banque" type="xs:string" />
+                    <xs:element name="numero_compte" type="xs:string" />
+                  </xs:sequence>
+                  <xs:attribute name="id" type="xs:integer" use="required" />
+                  <xs:attribute name="matricule" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
