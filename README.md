@@ -6,6 +6,7 @@ Application Web conçue en **PHP**, **XML** et **AJAX** pour la gestion du perso
 * **MBUNAN KOUAKAP JOHN**
 * **KOUAMOU MBIAKOP STEVE LIONEL**
 * **MBALA LESSE PRISCAS**
+* **KAMADEU HUGO**
 
 ## Fonctionnalités principales (à implémenter)
 * Gestion des employés (Ajout, Modification, Suppression, Recherche)
